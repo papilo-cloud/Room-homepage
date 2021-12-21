@@ -1,0 +1,411 @@
+:root
+{
+     --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+*,html
+{
+    box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+    .cont
+    {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    p
+    {
+        font-size: 14px;
+        color: var(--Dark-Gray);
+        line-height: 21px;
+    }
+    .img
+    {
+        display: none;
+    }
+    .imgs
+    {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 50vh;
+    }
+    .imgs .slideImgs
+    {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        display: none;
+    }
+    .slideImgs img 
+    {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    header
+    {
+        position: fixed;
+        width: 100%;
+        z-index:100;
+        display: flex;    
+        padding: 20px;
+        color: var(--White);
+        text-transform: lowercase;
+    }
+    header .logo 
+    {
+       margin-left: 6rem;
+       font-weight: bold;
+    }
+     ul li 
+    {
+        display: inline-flex;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .txt
+    {
+        padding: 20px;
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+    .txt .slideTxt
+    {
+        position: relative;
+        display: none;
+
+    }
+    .txt .shop
+    {
+        margin-top: 2rem;
+    }
+    .shop span
+    {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-right: 2rem;
+        letter-spacing: 8px;
+        word-spacing: 8px;
+    }
+    .btn
+    {
+        display: none;
+    }
+    .btn1
+    {
+        display: block;
+        position: absolute;
+       bottom: 0;
+        right: 0;
+        background:var(--Black);
+    }
+    .btn1 button
+    {
+        background: inherit;
+        font-size: 24px;
+        color:var(--White);
+        cursor: pointer;
+        font-weight: 400;
+        padding: 12px 22px;
+        border: none;
+        outline: none;
+    }
+    .others 
+    {
+       
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .img1, .img2, .txt1
+    {
+        width: 100%;
+        position: relative;
+        margin: 0;
+        height: 50vh;
+        overflow: hidden;
+    }
+    .img1 img, .img2 img
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .txt1
+    {
+        padding: 20px;
+    }
+    .txt1 h4
+    {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+   
+    .show
+    {
+        top: 0;
+    }
+   
+@media screen and (max-width:420px)
+{
+   
+     .navMenu
+    {
+        position: fixed;
+        background-color: var(--White);
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 6rem;
+        color: var(--Black);
+        padding-top: 20px;
+        display: flex;
+        padding-left: 0;
+        transition: .4s;
+    }
+
+    .navMenu ul li 
+    {
+        display: inline-flex;
+        margin-left: 10px;
+
+    }
+    header .close
+    {
+        display: inline-block;
+        margin-left: 0;
+    }
+    .hamburger
+    {
+        display: block;
+        cursor: pointer;
+    }
+   
+}
+.show{
+    top: 0;
+}
+
+
+@media screen and (min-width:768px)
+{
+    header
+    {
+        position: fixed;
+        padding: 2rem;
+    }
+    header .hamburger,.close
+    {
+        display: none;
+    }
+    .navMenu
+    {
+        display: flex;
+       padding-top: -10px;
+       margin-top: -10px;
+    }
+    .navMenu li 
+    {
+        margin-right: 10px;
+        font-size: 12px;
+        position: relative;
+        cursor: pointer;
+    }
+    li:hover:before
+    {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: var(--White);
+        bottom: -1rem;
+
+    }
+    header .logo
+    {
+        margin-left: 0;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    p 
+    {
+        font-size: 10px;
+    }
+    .cont
+    {
+        width: 100%;
+        position: relative;
+        height: 100vh;
+    }
+    .cont .imgs
+    {
+        display: none;
+    }
+    .cont::after
+    {
+        content: '';
+        display: table;
+        clear: both;
+    }
+    .img
+    {
+        position: relative;
+        width: 60%;
+        float: left;
+        display: block;
+        height: 65vh;
+    }
+    .img .slideImg
+    {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .slideImg img 
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .txt
+    {
+        position: relative;
+        width: 40%;
+        height: 65vh;
+        float: left;
+        padding: 3rem;
+        padding-top: 2rem;
+        margin-bottom: 0;
+    }
+    .txt h1
+    {
+        font-size: 30px;
+    }
+    .txt p 
+    {
+        margin-bottom: 0;
+    }
+    .shop
+    {
+       margin: 0%;
+       padding: 0;
+       margin-top: -30px;
+        position: relative;
+    }
+    .shop span 
+    {
+        margin-right: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+        word-spacing: 8px;
+        font-size: 11px;
+    }
+    .shop span:hover
+    {
+        color: var(--Dark-Gray);
+        cursor: pointer;
+    }
+    .btn
+   {
+       position: absolute;
+       display: block;
+       bottom: 0;
+       left: 0;
+       background: var(--Black);
+   }
+   .btn button 
+   {
+       padding: 11px 22px;
+       outline: none;
+       border: none;
+       background: inherit;
+       color: var(--White);
+       font-size: 22px;
+       font-weight: 100;
+   }
+   button:hover
+   {
+       cursor: pointer;
+       background: var(--Very-Dark-Gray);
+   }
+    .others
+    {
+        position: relative;
+        height: 35vh;
+        position: relative;
+       display: grid;
+       grid-template-columns: 30% 40% 30%;
+       overflow: hidden;
+       margin: 0;
+       padding: 0;
+    }
+    .img1, .img2
+    {
+        height: 35vh;
+        position: relative;
+        overflow: hidden;
+    }
+    .txt1
+    {
+        padding: 2rem;
+    }
+    .txt1 h4 
+    {
+        font-size: 11px;
+    }
+   
+}
+@media screen and (min-width:1440px)
+{
+    p
+    {
+        font-size: 14px
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
